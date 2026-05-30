@@ -1,0 +1,302 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  8.3 Contact css
+/*----------------------------------------*/
+
+
+.tp-contact{
+    &-info{
+        &-ptb{
+            @media #{$lg,$md,$xs} {
+                padding-top: 90px;
+                padding-bottom: 90px;
+            }
+        }
+        &-title{
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--tp-common-black);
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--tp-common-black);
+            padding-bottom: 14px;
+            margin-bottom: 12px;
+            & span{
+                color: var(--tp-theme-1);
+                margin-right: 13px;
+                transform: translateY(-2px);
+            }
+        }
+        &-item{
+            & a{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #333;
+                display: block;
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+            }
+        }
+        &-btn{
+            & span{
+                font-family: var(--tp-ff-heading);
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 156%;
+                color: var(--tp-common-white);
+                background: linear-gradient(90deg, #a020f0 0%, #00ffd1 100%);
+                display: inline-block;
+                padding: 16px 119px;
+                border-radius: 60px;
+                @media #{$xs} {
+                    padding: 16px 40px;
+                }
+                & a{
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                    &:hover{
+                        color: var(--tp-theme-1);
+                    }
+                }
+                & svg{
+                    margin-right: 20px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &-banner{
+        border-radius: 20px;
+        padding-top: 140px;
+        padding-bottom: 250px;
+        position: relative;
+        @media #{$md} {
+            padding-top: 90px;
+            padding-bottom: 200px; 
+        }
+        @media #{$xs} {
+            padding-top: 90px;
+            padding-bottom: 160px; 
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            background: rgba(0, 0, 0, 0.2);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &-info{
+            border: 1.50px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1);
+            margin-left: 90px;
+            padding: 32px 30px 32px 40px;
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                margin-left: 0;
+            }
+            @media #{$md,$xs} {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+        &-title{
+            font-weight: 500;
+            font-size: 24px;
+            color: var(--tp-common-white);
+        }
+        &-location{
+            & a{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--tp-common-white);
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+            }
+        }
+        &-phone{
+            & a {
+                font-family: var(--tp-ff-heading);
+                font-weight: 500;
+                font-size: 20px;
+                letter-spacing: -0.02em;
+                color: var(--tp-common-white);
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+                & svg{
+                    color: #00FFD1;
+                }
+            }
+        }
+        &-email{
+            & a{
+                font-weight: 400;
+                font-size: 16px;
+                color: #b0b0b8;
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+            }
+        }
+        &-bigtext{
+            font-weight: 600;
+            font-size: 220px;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            color: var(--tp-common-white);
+            position: absolute;
+            bottom: -70px;
+            right: 0;
+            @media #{$md,$xs} {
+                font-size: 180px;
+                bottom: -50px;
+            }
+            @media #{$sm} {
+                font-size: 130px;
+            }
+            @media #{$xs} {
+                font-size: 90px;
+                bottom: -30px;
+            }
+        }
+    }
+    &-input{
+        & .tp-label{
+            font-weight: 500;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 6px;
+            letter-spacing: -0.03em;
+            font-family: var(--tp-ff-heading);
+        }
+        & .tp-input{
+            font-weight: 400;
+            font-size: 16px;
+            font-family: var(--tp-ff-body);
+            padding: 0;
+            padding-right: 30px;
+            border: none;
+            border-bottom: 1px solid var(--tp-common-black);
+            height: 40px;
+            color: var(--tp-common-black);
+            background: transparent;
+            &::placeholder{
+                color: rgba(51, 51, 51, 0.6);
+                font-weight: 400;
+                font-size: 16px;
+            }
+            &:focus{
+                border-color: var(--tp-theme-1);
+            }
+            &-icon{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                color: var(--tp-common-black);
+            }
+        }
+        & .tp-message{
+            height: 100px;
+            resize: none;
+        }
+        & .tp-message-icon{
+            bottom: auto;
+            top: 10px;
+        }
+    }
+    &-privacy{
+        & p{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 171%;
+            letter-spacing: -0.02em;
+            color: #000;
+        }
+    }
+    &-form{
+        &-ptb{
+            @media #{$lg,$md,$xs} {
+                padding-top: 90px;
+                padding-bottom: 90px;
+            }
+        }
+    }
+    &-shadow{
+        border-radius: 100%;
+        background: linear-gradient(180deg, #a020f0 0%, #00ffd1 100%);
+        filter: blur(200px);
+        width: 300px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -100px;
+        z-index: -1;
+    }
+    &-map{
+        &-wrapper{
+            width: 100%;
+            height: 640px;
+            border-radius: 20px;
+            overflow: hidden;
+            @media #{$lg} {
+                height: 600px;
+            }
+            @media #{$md} {
+                height: 500px;
+            }
+            @media #{$xs} {
+                height: 450px;
+            }
+            & iframe{
+                width: 100%;
+                height: 100%;
+                filter: saturate(0);
+            }
+        }
+        &-icon{
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                top: -5px;
+                left: -5px;
+                margin: 0 auto;
+                height: 120px;
+                width: 120px;
+                z-index: -1;
+                border-radius: 140px;
+                backdrop-filter: blur(7px);
+                transform: translate(-20%, -20%);
+                background: #00ffd1;
+                border: 20px solid rgba(13, 13, 13, 0.4);
+                animation: animate-pulse 3s linear infinite;
+            }
+            & span{
+                display: grid;
+                height: 60px;
+                width: 60px;
+                z-index: 2;
+                text-align: center;
+                border-radius: 50%;
+                place-content: center;
+                background-color: var(--tp-theme-primary);
+            }
+            &-box{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+            }
+        }
+    }
+}

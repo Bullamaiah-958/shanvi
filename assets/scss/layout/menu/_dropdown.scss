@@ -1,0 +1,133 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  4.1 dropdown scss
+/*----------------------------------------*/
+
+.tp-header{
+    &-dropdown{
+        &  nav{
+            &  ul{
+                & li{
+                    position: relative;
+                    list-style: none;
+                    &.p-static{
+                        position: static;
+                    }
+                    &.tp-menu-last{
+                        & .tp-submenu{
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                    &.has-dropdown{
+                        & > a{
+                            &::after {
+                                content: "";
+                                width: 0;
+                                height: 0;
+                                margin-left: 7px;
+                                display: inline-block;
+                                transition: all 0.3s 0s ease-out;
+                                border-top: 4px solid transparent;
+                                border-bottom: 4px solid transparent;
+                                border-left: 7px solid currentColor;
+                                transform: translateY(0px);
+                            }
+                        }
+                        &:hover > a {
+                            &::after {
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                    & .tp-submenu{
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 240px;
+                        z-index: 99;
+                        opacity: 0;
+                        padding: 12px 0;
+                        transition: 0.5s;
+                        text-align: start;
+                        visibility: hidden;
+                        transform-origin: 0 0;
+                        transform: scale(1, 0);
+                        backdrop-filter: blur(10px);
+                        box-shadow: 0 20px 30px -8px rgba(19, 19, 22, 0.1);
+                        background: rgba($color: #F8F8FB, $alpha: 0.9);
+                        & li{
+                            width: 100%;
+                            padding: 6px 30px;
+                            & a{
+                                position: relative;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 1;
+                                width: 100%;
+                                display: inline-block;
+                                color: var(--tp-common-black);
+                                @media #{$x3l,$xxl,$xl}{
+                                    font-size: 14px;
+                                }
+                            }
+                            & .tp-submenu{
+                                top: 0;
+                                left: 100%;
+                            }
+                            &:hover{
+                                & > a{
+                                    color: var(--tp-theme-1);
+                                    transform: translateX(5px);
+                                }
+                            }
+                        }
+                        &.tp-megamenu{
+                            width: 480px;
+                            padding: 30px 30px;
+                        }
+                    }
+                    &:hover > {
+                        & .tp-submenu{
+                            opacity: 1;
+                            visibility: visible;
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.dropdown-white-bg {
+    & nav ul li .tp-submenu {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    & nav ul li .tp-submenu {
+        & li{
+            & a{
+                color: #636368;
+            }
+            &:hover {
+                & > a {
+                    background-color: #F8F8FB;
+                    color: var(--tp-common-black);
+                }
+            }
+            &.menu-item-has-children{
+                & > a{
+                    &::after{
+                        color: #636368;
+                    }
+                }
+                &:hover{
+                    & > a{
+                        &::after{
+                            color: var(--tp-common-black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

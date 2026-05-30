@@ -1,0 +1,26 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap';
+
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'IBM Plex Sans', sans-serif",
+        'heading': "'Sora', sans-serif",
+        'sora': "'Sora', sans-serif",
+        'p': "'IBM Plex Sans', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+// font size
+$font-size: (
+    'fz': (
+        'body': 14px,
+        'p': 16px,
+    )
+);
+
+

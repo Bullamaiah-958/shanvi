@@ -1,0 +1,204 @@
+@use '../utils' as *;
+/*---------------------------------
+    1.2 Common Css
+---------------------------------*/
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.z-index-1{
+	position: relative;
+	z-index: 1;
+}
+.z-index-2{
+	position: relative;
+	z-index: 2;
+}
+.z-index-3{
+	position: relative;
+	z-index: 3;
+}
+.z-index-4{
+	position: relative;
+	z-index: 4;
+}
+.z-index-5{
+	position: relative;
+	z-index: 5;
+}
+.z-index-6{
+	position: relative;
+	z-index: 6;
+}
+.z-index-7{
+	position: relative;
+	z-index: 7;
+}
+.z-index-8{
+	position: relative;
+	z-index: 8;
+}
+.z-index-9{
+	position: relative;
+	z-index: 9;
+}
+.z-index-10{
+	position: relative;
+	z-index: 10;
+}
+
+.gx-5{
+	--bs-gutter-x: 5px;
+}
+.gx-10{
+	--bs-gutter-x: 10px;
+}
+.gx-20{
+	--bs-gutter-x: 20px;
+}
+.gx-30{
+	--bs-gutter-x: 30px;
+}
+.gx-40{
+	--bs-gutter-x: 40px;
+}
+.gx-45{
+	--bs-gutter-x: 45px;
+}
+.gx-50{
+	--bs-gutter-x: 50px;
+}
+.gx-60{
+	--bs-gutter-x: 60px;
+}
+.gx-70{
+	--bs-gutter-x: 70px;
+}
+.gx-80{
+	--bs-gutter-x: 80px;
+	@media #{$lg} {
+		--bs-gutter-x: 30px;
+	}
+}
+.gx-90{
+	--bs-gutter-x: 90px;
+}
+.gx-100{
+	--bs-gutter-x: 100px;
+	@media #{$xl,$lg} {
+		--bs-gutter-x: 40px;
+	}
+	@media #{$md,$xs} {
+		--bs-gutter-x: 250px;
+	}
+}
+
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+.include-bg{
+	@include tp-background();
+}
+.tp-text-white{
+	color: var(--tp-common-white);
+}
+.tp-text-black{
+	color: var(--tp-common-black);
+}
+
+/* dropcap */
+.tp-dropcap{
+	&::first-letter{
+		float: left;
+		width: 65px;
+		height: 85px;
+		font-size: 90px;
+		line-height: .8;
+		font-weight: 500;
+		margin-right: 5px;
+		text-align: center;
+		line-height: inherit;
+		text-transform: capitalize;
+		color: var(--tp-common-white);
+		font-family: var(--tp-ff-body);
+	}
+}
+
+.tp-slide-transtion {
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  & .swiper-slide{
+	width: auto;
+  }
+}
+
+.tp-line-anim {
+	display: inline;
+	transition: all 0.3s linear;
+	background-repeat: no-repeat;
+	background-size: 0% 1px, 0 1px;
+	background-position: 100% 100%, 0 100%;
+	background-image: linear-gradient(currentcolor, currentcolor), linear-gradient(currentcolor, currentcolor);
+	&:hover {
+		background-size: 0% 1px, 100% 1px;
+	}
+}
+
+.tp-border-effect {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+        border-radius: 20px;
+        position: absolute;
+		top: var(--y) !important;
+		left: var(--x) !important;
+        transform: translate(-50%, -50%);
+        background: radial-gradient( #A020F0, #00FFD1);
+        transition: 0.5s, top 0s, left 0s;
+    }
+
+    >* {
+        z-index: 2;
+        position: relative;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 20px;
+        background: var(--tp-common-black);
+    }
+
+    &:hover{
+        &::before {
+            opacity: 1;
+        }
+    }
+}

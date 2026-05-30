@@ -1,0 +1,130 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.1 Footer Style 1
+/*----------------------------------------*/
+.tp-footer{
+    &-bg{
+        border-radius: 20px;
+    }
+    &-widget{
+        &-text{
+            margin-bottom: 38px;
+            @media #{$md,$xs} {
+                margin-bottom: 30px;
+            }
+            & p{
+                font-weight: 500;
+                color: var(--tp-common-black);
+            }
+        }
+        &-title{
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 500;
+            letter-spacing: -0.27px;
+        }
+        &-info{
+            & label{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1;
+                color: var(--tp-common-black);
+                & a{
+                    font-weight: 400;
+                    color: var(--tp-text-body);
+                    &:hover{
+                        color: var(--tp-theme-1);
+                    }
+                }
+            }
+            &-wrap{
+                margin-bottom: 65px;
+                @media #{$md} {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        &-social{
+            & a{
+                height: 40px;
+                width: 40px;
+                display: grid;
+                border-radius: 50%;
+                text-align: center;
+                place-content: center;
+                display: inline-block;
+                color: var(--tp-common-white);
+                background-color: var(--tp-common-black);
+                &:hover{
+                    background-color: var(--tp-theme-1);
+                }
+                &:not(:last-child){
+                    margin-right: 10px;
+                }
+                & span{
+                    & svg{
+                        transform: translateY(-1px);
+                    }
+                }
+            }
+        }
+        &-menu{
+            & ul{
+                & li{
+                    list-style-type: none;
+                    &:not(:last-child){
+                        margin-bottom: 7px;
+                    }
+                    & a{
+                        font-size: 16px;
+                        line-height: 1;
+                        color: var(--tp-text-body);
+                    }
+                }
+            }
+        }
+        &-btn{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            color: var(--tp-theme-1);
+        }
+        &-input{
+            position: relative;
+            & input{
+                border: 0;
+                padding-left: 0;
+                padding-right: 30px;
+                font-size: 16px;
+                color: var(--tp-common-black);
+                background-color: transparent;
+                border-bottom: 1px solid rgba(13, 13, 13, 0.15);
+                @include tp-placeholder{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--tp-common-black);
+                }
+            }
+        }
+        &-bdr{
+            border-right: 1px solid rgba(13, 13, 13, 0.15);
+            @media #{$md,$xs} {
+                border: none;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &-copyright{
+        & p{
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 0;
+            & a{
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+}
+                                          

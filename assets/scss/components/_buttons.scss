@@ -1,0 +1,215 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 Buttons
+/*----------------------------------------*/
+
+.tp-btn{
+	&-purple{
+		display: inline-flex;
+		gap: 10px;
+		font-size: 17px;
+		font-weight: 500;
+		line-height: 1;
+		padding: 20px 30px;
+		border-radius: 30px;
+		position: relative;
+		transition: .3s;
+		letter-spacing: -0.34px;
+		color: var(--tp-common-white);
+		background-color: var(--tp-theme-1);
+		& .icon-left{
+			opacity: 0;
+			margin-left: -18px;
+			transition: .3s;
+		}
+		& .icon-right{
+			opacity: 1;
+			margin-right: 0;
+			transition: .3s;
+		}
+		&:hover{
+			color: var(--tp-common-white);
+			border-radius: 29px 29px 0 29px;
+			& .icon-left{
+				opacity: 1;
+				margin-left: 0;
+			}
+			& .icon-right{
+				opacity: 0;
+				margin-right: -18px;
+			}
+		}
+		&.btn-h{
+			&-48{
+				padding: 15px 26px;
+			}
+			&-52{
+				padding: 18px 26px;
+			}
+		}
+		&.btn{
+			&-black{
+				background-color: var(--tp-common-black);
+			}
+			&-white{
+				color: var(--tp-common-black);
+				background-color: var(--tp-common-white);
+			}
+			&-paste{
+				color: var(--tp-common-black);
+				background-color: var(--tp-common-paste);
+			}
+		}
+		&.paste-bg{
+			font-size: 14px;
+			padding: 10px 30px;
+			color: var(--tp-common-black);
+			background-color: var(--tp-common-paste);
+		}
+	}
+	&-border{
+		&-gradiant{
+			padding: 1px;
+			display: inline-flex;
+			border-radius: 100px;
+			justify-content: center;
+			color: var(--tp-common-black);
+			background: linear-gradient(90deg, #A020F0 0%, #00FFD1 100%);
+			&.btn-bg-black{
+				color: var(--tp-common-white);
+				& span{
+					background-color: var(--tp-common-black);
+				}
+			}
+			& span{
+				font-size: 17px;
+				font-weight: 500;
+				line-height: 1;
+				display: flex;
+				padding: 21px 24px;
+				border-radius: 30px;
+				align-items: center;
+				justify-content: center;
+				letter-spacing: -0.34px;
+				font-family: var(--tp-ff-sora);
+				background: var(--tp-common-white);
+				transition: all .3s ease, background .5s ease;
+				@media #{$xs} {
+					font-size: 16px;
+					padding: 18px 22px;
+				}
+				& i{
+					margin-left: 12px;
+				}
+			}
+			&:hover{
+				& span{
+					background-color: transparent;
+					color: var(--tp-common-white);
+				}
+			}
+		}
+		&-white{
+			font-size: 17px;
+			font-weight: 500;
+			line-height: 1;
+			transition: .3s;
+			padding: 20px 30px;
+			border-radius: 30px;
+			display: inline-flex;
+			justify-content: center;
+			letter-spacing: -0.34px;
+			color: var(--tp-common-white);
+			border: 1px solid var(--tp-common-white);
+			& span{
+				& svg{
+					margin-left: 10px;
+					transform: translateY(-1px);
+				}
+			}
+			&:hover{
+				color: var(--tp-common-black);
+				background-color: var(--tp-common-white);
+			}
+		}
+	}
+	&-grey{
+		background: transparent;
+		&:hover{
+			background: var(--tp-common-black);
+			& span{
+				background: var(--tp-common-black);
+				color: var(--tp-common-white);
+			}
+		}
+		& span{
+			background: #f2f2f2;
+		}
+	}
+	&-primary{
+		background: transparent;
+		&:hover{
+			background: var(--tp-common-black);
+			& span{
+				background: var(--tp-common-black);
+				color: var(--tp-common-white);
+			}
+		}
+		& span{
+			background: var(--tp-theme-1);
+			color: var(--tp-common-white);
+		}
+	}
+	&-paste{
+		background: transparent;
+		&:hover{
+			background: var(--tp-theme-1);
+			& span{
+				background: var(--tp-theme-1);
+				color: var(--tp-common-white);
+			}
+		}
+		& span{
+			background: var(--tp-common-paste);
+			color: var(--tp-common-black);
+		}
+	}
+}
+.tp-doubble-effect{
+	display: inline-flex;
+	align-items: center;
+	& span{
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 1px;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background-color: currentColor;
+			transition: transform .5s cubic-bezier(.59,.23,.22,.96);
+		}
+		&::before{
+			left: 0;
+		}
+		&::after{
+			left: calc(-1 * 1rem);
+			transform: translate(-100%);
+		}
+	}
+	&:hover{
+		& span{
+			&::after{
+				transform: translate(1rem);
+			}
+			&::before{
+				transform: translate(calc(100% + 1rem));
+			}
+		}
+	}
+}

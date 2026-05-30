@@ -1,0 +1,271 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1 Header Style 1
+/*----------------------------------------*/
+.header-transparent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    width: 100%;
+}
+
+.tp-header{
+    &-bg{
+        padding: 0 20px;
+        padding-left: 30px;
+        border-radius: 100px;
+        background-color: var(--tp-common-white);
+    }
+    &-mobile-space{
+        @media #{$lg,$md,$xs} {
+            padding: 7px 20px;
+        }
+    }
+    &-shadow{
+        box-shadow: 0 8px 40px -10px rgba(13, 13, 13, 0.08);
+    }
+    &-menu{
+        & > nav{
+            & > ul{
+                & > li{
+                    margin: 0 26px;
+                    list-style-type: none;
+                    display: inline-block;
+                    @media #{$xxl} {
+                        margin: 0 20px;
+                    }
+                    @media #{$xl} {
+                        margin: 0 12px;
+                    }
+                    & > a{
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 1;
+                        padding: 42px 0;
+                        display: inline-block;
+                        color: var(--tp-common-black);
+                        &.active{
+                            color: var(--tp-theme-1);
+                        }
+                        &:hover{
+                            color: var(--tp-theme-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-bar{
+        height: 58px;
+        width: 58px;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        border-radius: 50%;
+        color: var(--tp-common-black);
+        border: 1px solid rgba(13, 13, 13, 0.10);
+    }
+    &-4{
+        &-top{
+            &-wrap{
+                padding: 0px 30px;
+                border-radius: 40px;
+                background: var(--tp-common-black);
+                @media #{$md,$xs} {
+                    display: none;
+                }
+                @media #{$lg} {
+                    margin-bottom: 20px;
+                }
+            }
+            &-text{
+                & p{
+                    margin: 0;
+                    color: var(--tp-common-white);
+                    & span{
+                       @include tp-textGradient();
+                    }
+                }
+            }
+            &-lan{
+                padding: 10px 0;
+                &:hover{
+                    & .tp-header-4-top-lan-content{
+                        top: 35px;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                & span{
+                    font-size: 14px;
+                    cursor: pointer;
+                    color: var(--tp-common-white);
+                    & svg{
+                        margin: 0 4px;
+                        @extend %svg-1;
+                        display: inline-block;
+                    }
+                }
+                &-content{
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include tp-transition();
+                    & ul{
+                        padding: 10px;
+                        width: 150px;
+                        border-radius: 6px;
+                        display: inline-block;
+                        background-color: var(--tp-common-white);
+                        & li{
+                            list-style: none;
+                            color: var(--tp-common-black);
+                            & a{
+                                display: block;
+                                padding: 4px 10px;
+                                &:hover{
+                                    background-color: #F2F2F2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-social{
+                padding-left: 30px;
+                margin-left: 30px;
+                border-left: 1px solid rgba(255, 255, 255, 0.25);
+                & a{
+                    margin-right: 8px;
+                    color: var(--tp-common-white);
+                    &:hover{
+                        color: var(--tp-common-paste);
+                    }
+                }
+            }
+        }
+    }
+    &-6{
+        &-style{
+            padding: 14px;
+            border-radius: 100px;
+            display: inline-block;
+            backdrop-filter: blur(20px);
+            background: linear-gradient(239deg, rgba(255, 255, 255, 0.08) 17.93%, rgba(255, 255, 255, 0.08) 81.51%);
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                margin-left: 0;
+            }
+            & .tp-header-menu {
+                & > nav {
+                    & > ul {
+                        &  > li {
+                            margin: 0;
+                            &:not(:last-of-type){
+                                margin-right: 25px;
+                                @media #{$xl} {
+                                    margin-right: 8px;
+                                }
+                            }
+                            & > a{
+                                padding: 8px 19px;
+                                border-radius: 32px;
+                                color: var(--tp-common-white);
+                                background: var(--tp-common-black);
+                            }
+                        }
+                    }
+                }
+            }
+            & .tp-header-dropdown{
+                & nav{
+                    & ul{
+                        & li{
+                            & .tp-submenu{
+                                top: 145%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.header-10-style{
+                & .tp-header-menu {
+                    & > nav {
+                        & > ul {
+                            &  > li {
+                                & > a{
+                                    color: var(--tp-common-black);
+                                    background: var(--tp-common-white);
+                                    &.active{
+                                        color: var(--tp-theme-1);
+                                    }
+                                    &::after{
+                                        color: var(--tp-common-black);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-action{
+            & .tp-header-bar{
+                flex: 0 0 auto;
+                color: var(--tp-common-white);
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+            &.header-10-action{
+                & .tp-header-search{
+                    color: var(--tp-common-white);
+                }
+                & .tp-btn-border-gradiant{
+                    color: var(--tp-common-black);
+                    &:hover{
+                        & span{
+                            background-color: transparent;
+                        }
+                    }
+                    & span{
+                        background: var(--tp-common-white);
+                    }
+                }
+            }
+        }
+    }
+    &-9{
+        &-area{
+            & .tp-header-bar{
+                @media #{$lg} {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+    &-inner{
+        &-top{
+            &-wrap{
+                border-radius: 10px;
+                & .tp-header-4-top-lan {
+                    padding: 7px 0;
+                }
+            }
+        }
+        &-wrap{
+            padding: 0 30px;
+            border-radius: 20px;
+            background: var(--tp-common-white);
+            box-shadow: 0 8px 40px -10px rgba(13, 13, 13, 0.08);
+            @media #{$xl} {
+                padding: 0 20px;
+            }
+            @media #{$lg,$md,$xs} {
+                padding: 10px 10px;
+            }
+        }
+    }
+}

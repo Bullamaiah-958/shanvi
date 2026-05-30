@@ -1,0 +1,44 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.4 Blog css
+/*----------------------------------------*/
+
+.blog-list{
+    &-style{
+        & .ss-blog-cetagorie {
+            color: var(--tp-common-black);
+        }
+        & .tp-blog-thumb .shape-radius {
+            background-color: var(--tp-common-white);
+        }
+        & .tp-blog-thumb .shape-radius::before {
+            box-shadow: 0px -18px 0 0 var(--tp-common-white);
+        }
+        & .tp-blog-thumb .shape-radius::after {
+            box-shadow: 0px -18px 0 0 var(--tp-common-white);
+        }
+        & .tp-blog-item {
+            border: none;
+            border-radius: 0;
+        }
+        & .tp-blog-title {
+            color: var(--tp-common-black);
+            line-height: 140%;
+        }
+        & .tp-blog-content p {
+            color: #333;
+        }
+        & .tp-blog-link-btn {
+            color: var(--tp-common-black);
+            &:hover{
+                color: var(--tp-theme-1);
+            }
+        }
+        & .tp-blog-content {
+            padding: 37px 0 0;
+        }
+        & .tp-blog-thumb {
+            border-radius: 20px 20px 24px 20px;
+        }
+    }
+}

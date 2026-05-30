@@ -1,0 +1,157 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.2 Footer Style 2
+/*----------------------------------------*/
+.am-footer{
+    &-ptb{
+        & .ss-integrate-shape{
+            right: auto;
+            left: -100px;
+            top: auto;
+            bottom: -100px;
+        }
+    }
+    &-bg{
+        border-radius: 0 0 20px 20px;
+    }
+    &-main-wrap{
+        &.footer-style-black{
+            & .am-footer-widget{
+                &-social {
+                    & a{
+                        color: var(--tp-common-white);
+                        &:hover{
+                            color: var(--tp-common-paste);
+                        }
+                    }
+                }
+                &-mail{
+                    & a{
+                        color: var(--tp-common-white);
+                    }
+                    & p{
+                        color: rgba(255, 255, 255, 0.70);
+                    }
+                }
+            }
+            & .tp-footer-widget{
+                &-title{
+                    color: var(--tp-common-white);
+                }
+                &-menu{
+                    & ul{
+                        & li{
+                            & a{
+                                color: var(--tp-common-white);
+                                &:hover{
+                                    color: var(--tp-common-paste);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-widget{
+        &-mail{
+            & p{
+                font-size: 18px;
+                font-weight: 400;
+                position: relative;
+                margin-bottom: 5px;
+                color: var(--tp-common-black);
+            }
+            & a{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+        }
+        &-social{
+            & a{
+                font-size: 16px;
+                margin-right: 12px;
+                display: inline-block;
+                &:hover{
+                    color: #3B5998;
+                }
+            }
+        }
+    }
+    &-copyright{
+        &-wrap{
+            padding: 32px 0;
+            border-top: 1px solid rgba(13, 13, 13, 0.10);
+            &.style-black{
+                border-color: rgba(255, 255, 255, 0.25);
+                & .am-footer-copyright-text {
+                    & p {
+                        & a{
+                            color: var(--tp-common-paste);
+                        }
+                    }
+                }
+            }
+        }
+        &-text{
+            & p{
+                margin: 0;
+                & a{
+                    color: var(--tp-theme-1);
+                }
+                &.color-white{
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+    }
+}
+
+
+.ss-footer{
+    &-ptb{
+        @media #{$md,$xs} {
+            padding-top: 80px;
+        }
+    }
+    &-top{
+        @media #{$md,$xs} {
+            padding-bottom: 80px;
+        }
+        &-subtitle{
+            font-size: 50px;
+            font-weight: 500;
+            line-height: 1;
+            display: inline-block;
+            letter-spacing: -0.75px;
+            transform: translateY(30px);
+            color: var(--tp-common-paste);
+            font-family: var(--tp-ff-sora);
+        }
+        &-title{
+            font-size: 200px;
+            line-height: 0;
+            margin: 0;
+            filter: blur(10px);
+            letter-spacing: -4px;
+            color: rgba(255, 255, 255, 0.35);
+            @media #{$xxl} {
+                font-size: 185px;
+            }
+            @media #{$xl} {
+                font-size: 160px;
+            }
+            @media #{$lg} {
+                font-size: 135px;
+            }
+            @media #{$md} {
+                font-size: 100px;
+            }
+            @media #{$xs} {
+                font-size: 55px;
+            }
+        }
+    }
+}

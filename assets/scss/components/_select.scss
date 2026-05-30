@@ -1,0 +1,66 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.7 select
+/*----------------------------------------*/
+
+.nice-select.Aimaker-select {
+    position: relative;
+    height: 40px;
+    line-height: 56px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    line-height: 40px;
+    padding-right: 121px;
+    padding-left: 22px;
+    width: auto;
+    & span{
+        &.current{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -0.17px;
+            color: var(--tp-common-black);
+            text-transform: math-auto;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: "\f107";
+        top: 50%;
+        right: 20px;
+        margin-top: 0;
+        font-weight: 500;
+        pointer-events: none;
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        transform-origin: center;
+        transform: translateY(-50%);
+        color: var(--tp-common-black);
+        font-family: var(--tp-ff-fontawesome);
+    }
+    &.open{
+        border-color: var(--tp-common-black);
+        &::after{
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+    & .list{
+        width: 100%;
+        background: #f2f2f2;
+        border: none;
+        box-shadow: none;
+        & li{
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--tp-common-black);
+            text-transform: math-auto;
+            &.selected{
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: -0.17px;
+                color: var(--tp-common-black);
+            }
+        }
+    }
+}

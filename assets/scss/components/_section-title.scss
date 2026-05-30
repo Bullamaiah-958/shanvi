@@ -1,0 +1,151 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.6 Section Title
+/*----------------------------------------*/
+
+.tp-section{
+    &-title{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        @media #{$xl,$lg} {
+            font-size: 48px;
+        }
+        @media #{$md} {
+            font-size: 45px;
+        }
+        @media #{$xs} {
+            font-size: 36px;
+        }
+        @media #{$sm} {
+            font-size: 40px;
+        }
+        & br{
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                display: none;
+            }
+        }
+        &.color{
+            &-white{
+                color: var(--tp-common-white);
+            }
+        }
+        &.fs{
+            &-24{
+                font-size: 24px;
+                letter-spacing: -0.01em;
+                @media #{$xl,$xs} {
+                    font-size: 22px;
+                }
+            }
+            &-26{
+                font-size: 26px;
+                letter-spacing: -0.52px;
+                @media #{$xl,$xs} {
+                    font-size: 22px;
+                }
+            }
+            &-36{
+                font-size: 36px;
+                letter-spacing: -0.54px;
+            }
+            &-40{
+                font-size: 40px;
+            }
+            &-60{
+                font-size: 60px;
+                letter-spacing: -1.8px;
+                @media #{$xl,$lg} {
+                    font-size: 52px;
+                }
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+                @media #{$md,$sm} {
+                    font-size: 45px;
+                }
+            }
+            &-70{
+                font-size: 70px;
+                letter-spacing: -2.6px;
+                @media #{$xl} {
+                    font-size: 55px;
+                }
+                @media #{$lg} {
+                    font-size: 50px;
+                }
+                @media #{$md} {
+                    font-size: 50px;
+                }
+                @media #{$xs} {
+                    font-size: 45px;
+                    letter-spacing: -2px;
+                }
+            }
+            &-80{
+                font-size: 80px;
+                letter-spacing: -2.4px;
+                @media #{$xxl} {
+                    font-size: 65px;
+                }
+                @media #{$xl,$lg,$md} {
+                    font-size: 55px;
+                }
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+            }
+            &-90{
+                font-size: 90px;
+                letter-spacing: -2.7px;
+                @media #{$xxl} {
+                    font-size: 65px;
+                }
+                @media #{$xl,$lg,$md} {
+                    font-size: 55px;
+                }
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+            }
+            &-110{
+                font-size: 110px;
+                line-height: 1;
+                letter-spacing: -2.2px;
+                @media #{$xxl} {
+                    font-size: 65px;
+                }
+                @media #{$xl,$lg,$md} {
+                    font-size: 55px;
+                }
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+            }
+        }
+        &.fw{
+            &-600{
+                font-weight: 600;
+            }
+        }
+        & .text{
+            &-gradient{
+                @include tp-textGradient();
+                & .word{   
+                    @include tp-textGradient();
+                }
+            }
+        }
+    }
+    &-subtitle{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        display: inline-block;
+        &.color-peste{
+            color: var(--tp-common-paste);
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  8.4 Error css
+/*----------------------------------------*/
+
+.tp-error{
+    &-text{
+        font-weight: 700;
+        font-size: 520px;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+        line-height: 1;
+        filter: blur(8px);
+        @media #{$lg,$md} {
+            font-size: 320px;
+        }
+        @media #{$xs} {
+            font-size: 150px;
+        }
+        @media #{$sm} {
+            font-size: 220px;
+        }
+    }
+    &-title{
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+        @media #{$sm} {
+            font-size: 80px;
+        }
+        @media #{$xs} {
+            font-size: 60px;
+        }
+    }
+    &-main{
+        margin-top: -120px;
+        position: relative;
+        z-index: 1;
+        @media #{$lg,$md,$xs} {
+            margin-top: 0;
+        }
+    }
+    &-bg{
+        &-wrap{
+            height: 100vh;
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 40%;
+                z-index: 0;
+                background: linear-gradient(359deg, rgb(0 0 0 / 60%) 0%, rgba(255, 255, 255, 0) 100%);
+            }
+        }
+    }
+    &-content{
+        padding-top: 70px;
+        padding-bottom: 70px;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-earth{
+        position: absolute;
+        bottom: -1000px;
+        left: 0;
+        animation: rotate_anim 40s linear infinite;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        @media #{$lg} {
+            bottom: -700px;
+        }
+        @media #{$md} {
+            bottom: -500px;
+        }
+        @media #{$sm} {
+            bottom: -450px;
+        }
+        @media #{$xs} {
+            bottom: -250px;
+        }
+    }
+    &-shape{
+        position: absolute;
+        left: -73px;
+        bottom: 210px;
+        animation: rotate_anim 20s linear infinite;
+        &-2{
+            position: absolute;
+            top: 220px;
+            left: 300px;
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                left: 100px; 
+                & img{
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

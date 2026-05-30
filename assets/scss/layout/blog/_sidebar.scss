@@ -1,0 +1,190 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.3 Sidebar css
+/*----------------------------------------*/
+
+.sidebar{
+    &-search{
+        position: relative;
+        & input{
+            width: 100%;
+            height: 50px;
+            padding: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 50px;
+            border-radius: 0;
+            padding-right: 50px;
+            background: transparent;
+            color: var(--tp-common-black);
+            border: none;
+            border-bottom: 1px solid rgba(13, 13, 13, 0.1);
+            @include tp-placeholder{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1;
+                color: #333;
+            }
+            &:focus{
+                background-color: transparent;
+                border-color: var(--tp-theme-1);
+            }
+        }
+        & button{
+            position: absolute;
+            top: -7px;
+            right: 0;
+            height: 100%;
+            line-height: 60px;
+            color: var(--tp-common-black);
+        }
+
+    }
+    &-widget{
+        &-bg{
+            background: #f2f2f2;
+            padding: 37px 40px 40px 40px;
+            border-radius: 20px;
+            @media #{$lg,$xs} {
+                padding: 27px 20px 30px 20px;
+            }
+        }
+        &-title{
+            font-weight: 500;
+            font-size: 24px;
+            letter-spacing: -0.02em;
+            color: var(--tp-common-black);
+            margin-bottom: 20px;
+            &-border{
+                border-bottom: 1px solid rgba(13, 13, 13, 0.1);
+                padding-bottom: 24px;
+                margin-bottom: 30px;
+            }
+        }
+        &-category{
+            & ul{
+                & li{
+                    list-style-type: none;
+                    & a{
+                        font-size: 16px;
+                        padding: 23px 20px;
+                        font-weight: 500;
+                        line-height: 1;
+                        letter-spacing: -0.01em;
+                        color: #333;
+                        border: 1px solid rgba(13, 13, 13, 0.08);
+                        border-radius: 10px;
+                        @media #{$lg} {
+                            font-size: 14px;
+                        }
+                        & span{
+                            transition: .3s;
+                        }
+                        &:hover{
+                            box-shadow: 0 10px 20px -10px rgba(52, 52, 52, 0.2);
+                            color: var(--tp-common-black);
+                            background: #fff;
+                        }
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+    }
+    &-blog-grid-wrap{
+        & .sidebar-wrapper {
+            padding-left: 2px;
+          }
+    }
+    &-banner{
+        &-wrap{
+            border-radius: 20px;
+            padding: 55px 20px 20px 20px;
+        }
+        &-content{
+            padding: 0 30px 135px 30px;
+            @media #{$lg,$xs} {
+                padding: 0 10px 100px 10px;
+            }
+            & p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                color: var(--tp-common-white);
+            }
+        }
+        &-title{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 142%;
+            letter-spacing: -0.01em;
+            color: var(--tp-common-white);
+        }
+        &-button{
+            & a{
+                font-weight: 500;
+                font-size: 17px;
+                letter-spacing: -0.02em;
+                color: var(--tp-common-white);
+                border: 1.50px solid rgba(255, 255, 255, 0.3);
+                border-radius: 60px;
+                backdrop-filter: blur(20px);
+                background: rgba(255, 255, 255, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 7px 7px 7px 24px;
+                &:hover{
+                    & span{
+                        background: var(--tp-theme-1);
+                        color: var(--tp-common-white);
+                    }
+                }
+                & span{
+                    border-radius: 60px;
+                    width: 40px;
+                    height: 40px;
+                    background: var(--tp-common-white);
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--tp-common-black);
+                    transition: all .4s ease;
+                }
+            }
+        }
+    }
+}
+.tagcloud{
+    & a{
+        font-size: 16px;
+        line-height: 1;
+        padding: 11px 14px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgba(0, 0, 0, 0.6);
+        display: inline-block;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 14px;
+        color: #333;
+        border: 1px solid rgba(13, 13, 13, 0.1);
+        border-radius: 30px;
+        @media #{$lg}{
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+        @media #{$xs}{
+            padding: 10px 14px;  
+        }
+        &:not(:last-child){
+            margin-right: 5px;
+        }
+        &:hover{
+            color: var(--tp-common-white);
+            background-color: VAR(--tp-common-black);
+        }
+    }
+}

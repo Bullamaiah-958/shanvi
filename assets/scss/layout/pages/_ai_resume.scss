@@ -1,0 +1,431 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 Resume home all Css here
+/*----------------------------------------*/
+
+
+/*  hero css start here
+/*----------------------------------------*/
+.rb-hero{
+    &-ptb{
+        @media #{$md,$xs} {
+            padding-top: 130px;
+        }
+    }
+    &-box{
+        @media #{$md,$xs} {
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+    }
+    &-feature{
+        &-wrap{
+            margin-bottom: 20px;
+            padding-right: 80px;
+            padding-bottom: 20px;
+            display: inline-block;
+            border-bottom: 1px solid rgba(13, 13, 13, 0.10);
+            @media #{$xs} {
+                padding-right: 0;
+            }
+        }
+        &-title{
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--tp-common-black);
+            & i{
+                font-weight: 500;
+                & svg{
+                    margin-right: 6px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &-text{
+        & p{
+            & br{
+                @media #{$xl,$lg,$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-rating{
+        &-title{
+            font-size: 16px;
+            display: inline-block;
+            color: var(--tp-common-black);
+            & img{
+                margin: 0 6px;
+                @extend %svg-2;
+            }
+        }
+    }
+    &-thumb{
+        &-main{
+            & img{
+                max-width: inherit;
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    max-width: 100%;
+                }
+            }
+        }
+        &-shapes{
+            & .shape{
+                &-1{
+                    position: absolute;
+                    top: 33%;
+                    left: -12%;
+                    @media #{$xl,$lg,$md,$xs} {
+                        display: none;
+                    }
+                }
+                &-2{
+                    position: absolute;
+                    top: 19%;
+                    right: -27%;
+                    @media #{$xl,$lg,$md,$xs} {
+                        display: none;
+                    }
+                }
+                &-3{
+                    position: absolute;
+                    top: 0;
+                    left: 17%;
+                    transform-origin: top right;
+                    animation: tpswing 1s forwards infinite alternate;
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+                &-4{
+                    position: absolute;
+                    top: 0;
+                    right: 5%;
+                    @media #{$lg} {
+                        right: -4%;
+                    }
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+                &-5{
+                    top: 0;
+                    left: 42%;
+                    border-radius: 50%;
+                    position: absolute;
+                    @media #{$xl} {
+                        left: 35%;
+                        top: -10%;
+                    }
+                    @media #{$lg} {
+                        left: 34%;
+                        top: -10%;
+                    }
+                    @media #{$xs} {
+                        left: 64%;
+                        transform: scale(.7);
+                    }
+                }
+            }
+        }
+    }
+    &-btn{
+        &-wrap{
+            gap: 20px;
+            display: flex;
+            @media #{$lg,$xs} {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+
+/*  banner css start here
+/*----------------------------------------*/
+.rb-banner{
+    &-bg{
+        &::after{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            content: '';
+            background-color: #F2F2F2;
+        }
+    }
+    &-wrapper{
+        z-index: 2;
+        position: relative;
+        border-radius: 20px;
+        @media #{$xxl} {
+            padding-top: 120px;
+        }
+        @media #{$xl,$lg,$md} {
+            padding-top: 80px;
+        }
+        @media #{$xs} {
+            padding-top: 60px;
+        }
+    }
+    &-heading{
+        @media #{$lg,$md} {
+            padding-bottom: 100px;
+        }
+        @media #{$xs} {
+            padding-bottom: 60px;
+        }
+    }
+    &-title{
+        font-size: 80px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -2.4px;
+        color: var(--tp-common-white);
+        @media #{$lg,$md} {
+            font-size: 70px;
+        }
+        @media #{$xs} {
+            font-size: 50px;
+        }
+        & span{
+            display: inline-block;
+            color: var(--tp-common-paste);
+        }
+        & br{
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+    }
+    &-slider{
+        &-wrapper{
+            @media #{$xs} {
+                transform: translateY(20px);
+            }
+        }
+        &-title{
+            font-size: 160px; 
+            font-weight: 700;
+            line-height: 1;
+            color: transparent;
+            padding-bottom: 20px;
+            margin: 0;
+            font-family: var(--tp-ff-p);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(255, 255, 255, 0.65);
+            @media #{$lg,$md} {
+                font-size: 120px;
+            }
+            @media #{$xs} {
+                font-size: 110px;
+            }
+        }
+    }
+}
+
+
+/*  blog css start here
+/*----------------------------------------*/
+.rb-blog{
+    &-ptb{
+        @media #{$lg,$md} {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+        @media #{$xs} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+    &-heading{
+        @media #{$md,$xs} {
+            margin-bottom: 30px;
+        }
+    }
+    &-item{
+        &:hover{
+            & .rb-blog-item{
+                &-thumb{
+                    & img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        &-thumb{
+            overflow: hidden;
+            border-radius: 20px;
+            & img{
+                width: 100%;
+                border-radius: 20px;
+                transition: all .5s ease-in-out;
+            }
+        }
+        &-title{
+            font-size: 25px;
+            margin-bottom: 15px;
+            letter-spacing: -0.375px;
+            @media #{$lg,$md,$xs} {
+                font-size: 20px;
+            }
+             & br{
+                @media #{$lg,$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-meta{
+            font-size: 16px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            &::before{
+                content: '';
+                width: 30px;
+                height: 1.5px;
+                margin-right: 15px;
+                margin-bottom: 5px;
+                display: inline-block;
+                background-color: var(--tp-theme-1);
+            }
+        }
+        &-content{
+            margin-bottom: 25px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(13, 13, 13, 0.10);
+            & p{
+                & br{
+                    @media #{$xl,$lg,$md,$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-btn{
+            & a{
+                font-size: 17px;
+                font-weight: 500;
+                letter-spacing: -0.34px;
+                color: var(--tp-common-black);
+                &:hover{
+                    & span{
+                        background-color: var(--tp-theme-1);
+                    }
+                }
+                & span{
+                    width: 46px;
+                    height: 46px;
+                    margin-right: 5px;
+                    text-align: center;
+                    border-radius: 10px;
+                    place-content: center;
+                    background: #0D0D0D;
+                    display: inline-grid;
+                    @include tp-transition();
+                }
+            }
+        }
+    }
+}
+
+
+.rb-testimonial{
+    &-ptb{
+        @media #{$lg,$md,$xs} {
+            padding-top: 0;
+        }
+    }
+}
+
+
+/*  feature css start here
+/*----------------------------------------*/
+.rb-feature{
+    &-ptb{
+        @media #{$lg,$md} {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        @media #{$xs} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+    &-heading{
+        @media #{$md,$xs} {
+            margin-bottom: 30px;
+        }
+    }
+    &-item{
+        padding: 50px;
+        overflow: hidden;
+        border-radius: 20px;
+        background: var(--tp-gray-1);
+        @media #{$lg,$md} {
+            padding: 40px;
+        }
+        @media #{$xs} {
+            padding: 30px;
+        }
+        &.style{
+            &-1{
+                height: 476px;
+                @media #{$xs} {
+                    height: auto;
+                }
+                & .rb-feature-item{
+                    &-content{
+                        & p{
+                            & br{
+                                @media #{$xl} {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-2{
+                height: 420px;
+                @media #{$xs} {
+                    height: auto;
+                }
+                & .rb-feature-item{
+                    &-content{
+                        & p{
+                            & br{
+                                @media #{$xl} {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-content{
+            @media #{$xs} {
+                padding-bottom: 20px;
+            }
+            & p{
+                & br{
+                    @media #{$lg,$md,$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &-title{
+            margin-bottom: 10px;
+        }
+    }
+}

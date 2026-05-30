@@ -1,0 +1,21 @@
+@use '../../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 cta css
+/*----------------------------------------*/
+
+.tp-cta{
+    &-inner{
+        & .tp-cta-bg.am-cta-bdr {
+            border-radius: 20px;
+        }
+    }
+}
+
+.tp-footer{
+    &-inner{
+        & .am-footer-bg {
+            border-radius: 20px;
+        }
+    }
+}

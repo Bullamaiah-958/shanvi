@@ -1,0 +1,162 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.5 Breadcrumb scss
+/*----------------------------------------*/
+
+.tp-breadcrumb{
+    &-top{
+        &-ptb{
+            padding-top: 170px;
+            padding-bottom: 60px;
+            @media #{$md,$sm,$xs} {
+                padding-top: 120px;
+            }
+            @media #{$xs} {
+                padding-bottom: 30px;
+            }
+        }
+    }
+    &-ptb{
+        border-radius: 20px;
+        padding: 170px 0 180px 97px;
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            padding: 170px 0 180px 30px;
+        }
+        @media #{$md,$sm,$xs} {
+            padding: 130px 0 150px 30px;
+        }
+        @media #{$xs} {
+            padding: 100px 30px 100px 30px;
+        }
+    }
+    &-title{
+        font-weight: 600;
+        font-size: 110px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+        @media #{$lg} {
+            font-size: 80px;
+        }
+        @media #{$md} {
+            font-size: 70px;
+        }
+        @media #{$sm} {
+            font-size: 60px;
+        }
+        @media #{$xs} {
+            font-size: 40px;
+        }
+    }
+    &-list{
+        padding: 11px 20px;
+        border-radius: 60px;
+        display: inline-block;
+        backdrop-filter: blur(40px);
+        background: linear-gradient(209deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
+        & span{
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--tp-common-white);
+            & a{
+                color: var(--tp-common-paste);
+            }
+            &.dvdr{
+                padding: 0 5px;
+            }
+        }
+    }
+    &-shape{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 40px;
+        height: 160px;
+        background: #ecf2f0;
+        border-radius: 0 20px 20px 0;
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: transparent;
+            top: -40px;
+            left: -1px;
+            height: 40px;
+            width: 20px;
+            border-bottom-left-radius: 20px;
+            box-shadow: 0px 18px 0 0 #ecf2f0;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: transparent;
+            bottom: -40px;
+            left: 0;
+            height: 40px;
+            width: 20px;
+            border-top-left-radius: 20px;
+            box-shadow: 0px -18px 0 0 #ecf2f0;
+        }
+    }
+    &-shape-2{
+        position: absolute;
+        bottom: -1px;
+        right: 133px;
+        width: 240px;
+        height: 60px;
+        background: #ecf2f0;
+        border-radius: 20px 20px 0 0;
+        z-index: 1;
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            right: -30px;
+            bottom: 1px;
+            width: 30px;
+            height: 36px;
+            background: transparent;
+            border-bottom-left-radius: 20px;
+            box-shadow: -10px 10px 0 0 #ecf2f0;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: -31px;
+            bottom: 1px;
+            width: 31px;
+            height: 30px;
+            background: transparent;
+            border-bottom-right-radius: 20px;
+            box-shadow: 10px 10px 0 0 #ecf2f0;
+        }
+    }
+    &-bigtext{
+        font-weight: 600;
+        font-size: 220px;
+        line-height: .8;
+        margin-bottom: 0;
+        position: absolute;
+        letter-spacing: -0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        right: 0;
+        bottom: -14px;
+        @media #{$xl,$lg} {
+            font-size: 180px;
+        }
+        @media #{$md} {
+            font-size: 150px;
+        }
+        @media #{$sm} {
+            font-size: 120px;
+        }
+        @media #{$xs} {
+            font-size: 90px;
+        }
+    }
+}
