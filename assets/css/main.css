@@ -2189,7 +2189,7 @@ input[type=color] {
   padding: 0;
 }
 .header-sticky .tp-header-menu > nav > ul > li > a {
-  padding: 30px 0;
+  padding: 30px 5px;
 }
 .header-sticky.black-header-style {
   backdrop-filter: blur(20px);

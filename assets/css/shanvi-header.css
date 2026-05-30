@@ -1,0 +1,115 @@
+/**
+ * Shanvi AI — header (1200px–1399px laptop)
+ * HTML wrapper class is .tp-header-6-bg (not .tp-header-bg)
+ */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .tp-header-area .container.container-1830 {
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tp-header-area .tp-header-6-bg {
+    padding-left: 14px;
+    padding-right: 14px;
+    position: relative;
+  }
+
+  .tp-header-area .tp-header-6-bg > .row.align-items-center {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+  }
+
+  .tp-header-area .tp-header-6-bg > .row.align-items-center > .col-xl-2,
+  .tp-header-area .tp-header-6-bg > .row.align-items-center > .col-xl-3 {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    position: relative;
+    z-index: 3;
+  }
+
+  .tp-header-area .tp-header-6-bg > .row.align-items-center > .col-xl-7 {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: max-content !important;
+    max-width: min(760px, calc(100% - 260px)) !important;
+    flex: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 2;
+    display: block !important;
+  }
+
+  .tp-header-6-style.ml-200,
+  .tp-header-6-style.header-10-style.ml-200,
+  .tp-header-6-style {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .tp-header-6-style {
+    padding: 6px 8px;
+    display: inline-block;
+  }
+
+  .tp-header-6-style .tp-header-menu > nav > ul {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tp-header-6-style .tp-header-menu > nav > ul > li {
+    display: block;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .tp-header-6-style .tp-header-menu > nav > ul > li:not(:last-of-type) {
+    margin-right: 4px;
+  }
+
+  .tp-header-6-style .tp-header-menu > nav > ul > li > a {
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .tp-header-6-style .tp-header-dropdown nav ul li.has-dropdown > a::after {
+    margin-left: 4px;
+    border-left-width: 6px;
+  }
+
+  .tp-header-logo img {
+    width: 168px !important;
+    max-width: 168px;
+    height: auto;
+  }
+
+  .header-sticky .tp-header-menu > nav > ul > li > a {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .header-sticky.black-header-style .tp-header-6-style .tp-header-menu > nav > ul > li > a,
+  .header-sticky .tp-header-6-style.header-10-style .tp-header-menu > nav > ul > li > a {
+    padding: 6px 10px;
+  }
+
+  .tp-header-6-action .tp-header-bar {
+    height: 48px;
+    width: 48px;
+  }
+
+  .tp-header-6-action .tp-header-bar.ml-15 {
+    margin-left: 8px;
+  }
+}

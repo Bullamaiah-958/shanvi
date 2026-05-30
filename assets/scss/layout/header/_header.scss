@@ -165,7 +165,7 @@
                         &  > li {
                             margin: 0;
                             &:not(:last-of-type){
-                                margin-right: 5px;
+                                margin-right: 25px;
                                 @media #{$xl} {
                                     margin-right: 8px;
                                 }
