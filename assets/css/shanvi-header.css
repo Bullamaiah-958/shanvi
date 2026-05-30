@@ -1,17 +1,11 @@
 /**
- * Shanvi AI — header (1200px–1399px laptop)
- * HTML wrapper class is .tp-header-6-bg (not .tp-header-bg)
+ * Shanvi AI — centered desktop header (≥1200px)
+ * Wrapper: .tp-header-6-bg (not .tp-header-bg)
  */
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .tp-header-area .container.container-1830 {
-    max-width: 100%;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
 
+/* Center menu on all desktop widths (xl and up) */
+@media only screen and (min-width: 1200px) {
   .tp-header-area .tp-header-6-bg {
-    padding-left: 14px;
-    padding-right: 14px;
     position: relative;
   }
 
@@ -35,15 +29,19 @@
   .tp-header-area .tp-header-6-bg > .row.align-items-center > .col-xl-7 {
     position: absolute !important;
     left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+    transform: translateX(-50%) !important;
     width: max-content !important;
-    max-width: min(760px, calc(100% - 260px)) !important;
+    max-width: min(920px, calc(100% - 300px)) !important;
     flex: none !important;
     padding: 0 !important;
     margin: 0 !important;
     z-index: 2;
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .tp-header-6-style.ml-200,
@@ -51,11 +49,6 @@
   .tp-header-6-style {
     margin-left: 0 !important;
     margin-right: 0 !important;
-  }
-
-  .tp-header-6-style {
-    padding: 6px 8px;
-    display: inline-block;
   }
 
   .tp-header-6-style .tp-header-menu > nav > ul {
@@ -66,9 +59,58 @@
   }
 
   .tp-header-6-style .tp-header-menu > nav > ul > li {
-    display: block;
     flex-shrink: 0;
     white-space: nowrap;
+  }
+
+  /*
+   * Sticky: main.css sets .header-sticky { background: #fff } and
+   * .header-10-style links keep background: #fff — white pills on white bar (1400px+).
+   */
+  .header-sticky.tp-header-area .tp-header-6-style.header-10-style {
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  .header-sticky.tp-header-area .tp-header-6-style.header-10-style .tp-header-menu > nav > ul > li > a {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--tp-common-black);
+    padding: 10px 16px;
+    border-radius: 32px;
+  }
+
+  .header-sticky.tp-header-area .tp-header-6-style.header-10-style .tp-header-menu > nav > ul > li > a:hover,
+  .header-sticky.tp-header-area .tp-header-6-style.header-10-style .tp-header-menu > nav > ul > li > a.active {
+    color: var(--tp-theme-1);
+    background: transparent !important;
+  }
+
+  .header-sticky.tp-header-area .tp-header-6-style.header-10-style .tp-header-menu > nav > ul > li > a::after {
+    color: var(--tp-common-black);
+  }
+}
+
+/* Tighter spacing on laptop widths only */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .tp-header-area .container.container-1830 {
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tp-header-area .tp-header-6-bg {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .tp-header-area .tp-header-6-bg > .row.align-items-center > .col-xl-7 {
+    max-width: min(760px, calc(100% - 260px)) !important;
+  }
+
+  .tp-header-6-style {
+    padding: 6px 8px;
+    display: inline-block;
   }
 
   .tp-header-6-style .tp-header-menu > nav > ul > li:not(:last-of-type) {
