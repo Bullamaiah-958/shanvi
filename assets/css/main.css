@@ -2628,10 +2628,11 @@ input[type=color] {
   color: var(--tp-common-black);
 }
 .tp-footer-widget-title {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   font-weight: 500;
   letter-spacing: -0.27px;
+  text-transform: uppercase;
 }
 .tp-footer-widget-info label {
   font-size: 16px;
@@ -2799,6 +2800,16 @@ input[type=color] {
 }
 .am-footer-widget-social a:hover {
   color: #3B5998;
+}
+.am-footer-main-wrap.footer-style-black,
+.am-footer-main-wrap.footer-style-black h4,
+.am-footer-main-wrap.footer-style-black p,
+.am-footer-main-wrap.footer-style-black li,
+.am-footer-main-wrap.footer-style-black a {
+  color: var(--tp-common-white);
+}
+.am-footer-main-wrap.footer-style-black a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 .am-footer-copyright-wrap {
   padding: 32px 0;
