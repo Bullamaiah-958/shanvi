@@ -18442,3 +18442,30 @@ body .ui-tooltip {
 }
 
 /*# sourceMappingURL=main.css.map */
+.shanvi-service-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:15px;
+    margin-bottom:25px;
+}
+
+.shanvi-tag{
+    display:inline-block;
+    padding:6px 12px;
+    font-size:13px;
+    font-weight:500;
+    line-height:1.2;
+    border-radius:20px;
+    background:#f4f6fb;
+    border:1px solid #e5e7eb;
+    color:#111827;
+    text-decoration:none;
+    transition:all .3s ease;
+}
+
+.shanvi-tag:hover{
+    background:#6c5ce7;
+    border-color:#6c5ce7;
+    color:#fff;
+}
