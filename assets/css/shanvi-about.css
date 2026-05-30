@@ -57,6 +57,12 @@
   margin-bottom: 14px;
 }
 
+/* Bootstrap 5.2+ removed .text-justify utility */
+.shanvi-about-text.text-justify p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .shanvi-about-text p:last-child {
   margin-bottom: 0;
 }
