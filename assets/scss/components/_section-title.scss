@@ -6,12 +6,12 @@
 
 .tp-section{
     &-title{
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 500;
         line-height: 1.1;
         letter-spacing: -0.03em;
         @media #{$xl,$lg} {
-            font-size: 48px;
+            font-size: 40px;
         }
         @media #{$md} {
             font-size: 45px;
