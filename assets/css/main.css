@@ -18573,3 +18573,31 @@ body .ui-tooltip {
 
   font-weight: 600;
 }
+.shanvi-industry-image-card {
+   border-radius: 28px;
+   overflow: hidden;
+   background: #ffffff;
+   padding: 8px;
+   border: 1px solid rgba(255,255,255,0.12);
+
+   box-shadow:
+      0 12px 35px rgba(11, 61, 255, 0.08),
+      inset 0 1px 0 rgba(255,255,255,0.5);
+
+   transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shanvi-industry-image-card img {
+   width: 100%;
+   height: auto;
+   display: block;
+   border-radius: 22px;
+   object-fit: cover;
+}
+
+.shanvi-industry-image-card:hover {
+   transform: translateY(-6px);
+   box-shadow:
+      0 30px 80px rgba(11, 61, 255, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
