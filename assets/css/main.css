@@ -18569,3 +18569,7 @@ body .ui-tooltip {
     text-transform: uppercase;
     color: var(--tp-common-px-black);
 }
+.tupper {
+
+  font-weight: 600;
+}
