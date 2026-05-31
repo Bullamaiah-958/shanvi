@@ -10363,7 +10363,7 @@ input[type=color] {
   }
 }
 .rb-portfolio-item-box {
-  padding: 50px;
+  padding: 35px;
   position: relative;
   border-radius: 20px;
   background-color: var(--tp-common-white);
@@ -10385,7 +10385,7 @@ input[type=color] {
   }
 }
 .rb-portfolio-item-box p {
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 @media (max-width: 767px) {
   .rb-portfolio-item-box p {
@@ -10426,7 +10426,7 @@ input[type=color] {
   color: var(--tp-theme-1);
 }
 .rb-portfolio-item-bottom {
-  padding-top: 25px;
+  padding-top: 5px;
   border-top: 1px solid rgba(13, 13, 13, 0.1);
 }
 .rb-portfolio-counter {
@@ -18514,8 +18514,8 @@ body .ui-tooltip {
 
 .shanvi-tag{
     display:inline-block;
-    padding:6px 12px;
-    font-size:13px;
+    padding: 4px 8px;
+    font-size: 11px;
     font-weight:500;
     line-height:1.2;
     border-radius:20px;
