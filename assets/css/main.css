@@ -4019,7 +4019,7 @@ input[type=color] {
   left: 0;
   z-index: 2;
   width: 320px;
-  height: 220px;
+  height: 100px;
   display: inline-block;
   border-top-right-radius: 50px;
   background-color: var(--tp-common-black);
