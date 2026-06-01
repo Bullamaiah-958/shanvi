@@ -10484,7 +10484,7 @@ input[type=color] {
   padding: 50px;
   position: relative;
   border-radius: 20px;
-  background-color: var(--tp-common-white);
+  background-color: #ffffffc9;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .rb-portfolio-item-box {
