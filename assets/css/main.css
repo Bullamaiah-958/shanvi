@@ -10507,15 +10507,21 @@ input[type=color] {
   }
 }
 .cb-portfolio-bg::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  content: "";
-  z-index: -1;
-  border-radius: 40px;
-  background-color: #0D0D0D;
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+content: "";
+z-index: -1;
+border-radius: 40px;
+background: linear-gradient(
+    90deg,
+    #c8c0ea 0%,
+    #b4cdea 25%,
+    #c3e0db 55%,
+    #dddddd 100%
+);
 }
 
 /*  team css start here
@@ -11921,6 +11927,9 @@ input[type=color] {
 
 /*  feature css start here
 /*----------------------------------------*/
+.int-service-ptb {
+  background-color: rgb(242, 242, 242);
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .int-service-ptb {
     padding-bottom: 0;
