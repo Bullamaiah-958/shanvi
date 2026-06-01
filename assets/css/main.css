@@ -18611,3 +18611,19 @@ body .ui-tooltip {
       0 30px 80px rgba(11, 61, 255, 0.22),
       inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
+.tp-section-title.tt{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  padding:2px;
+}
+
+.tp-step-content p{
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.7;
+  color: white;
+  font-style: italic;
+  padding:5px;
+}
