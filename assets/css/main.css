@@ -17725,12 +17725,13 @@ body .ui-tooltip {
   transform: scale(1.1);
 }
 .postbox-title {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 125%;
   font-weight: 500;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
   color: var(--tp-common-black);
+  letter-spacing: -0.03em;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .postbox-title {
@@ -18679,4 +18680,47 @@ body .ui-tooltip {
 }
 .tp-breadcrumb-title {
     font-size: 50px !important;
+}
+.ig-work-item-number span i {
+    width: 30px !important;
+    height: 30px!important;
+
+}
+.ig-work-item-number span {
+    font-size: 14px !important;
+
+}
+.ig-work-item {
+    gap: 18px !important;
+
+}
+.ig-work-item-content{
+margin-top: 10px;
+}
+.service-benefits{
+    list-style:none;
+    padding:0;
+}
+
+.service-benefits li{
+    position:relative;
+    padding-left:35px;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+.service-benefits li::before{
+    content:"→";
+    position:absolute;
+    left:0;
+    top:2px;
+    width:22px;
+    height:22px;
+    border:1.5px solid #108df3;
+    border-radius:50%;
+    color:#108df3;
+    font-size:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
