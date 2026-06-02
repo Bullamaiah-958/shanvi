@@ -18677,3 +18677,6 @@ body .ui-tooltip {
     opacity:1 !important;
     visibility:visible !important;
 }
+.tp-breadcrumb-title {
+    font-size: 50px !important;
+}
