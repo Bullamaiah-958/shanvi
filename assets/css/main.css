@@ -18724,3 +18724,6 @@ margin-top: 10px;
     align-items:center;
     justify-content:center;
 }
+.tp-btn-border-gradiant span {
+    padding: 21px 15px !important;
+}
