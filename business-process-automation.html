@@ -864,20 +864,92 @@
    <script src="assets/js/matter.js"></script>
    <script src="assets/js/throwable.js"></script>
    <script src="assets/js/main.js"></script>
+   <!-- Organization Schema -->
    <script type="application/ld+json">
       {
-      "@context":"https://schema.org",
-      "@type":"Service",
-      "name":"AI Strategy & Consulting",
-      "serviceType":"AI Consulting Services",
-      "provider":{
-         "@type":"Organization",
-         "name":"Shanvi AI Consulting Pvt. Ltd.",
-         "url":"https://shanvi.ai"
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Shanvi AI Consulting",
+      "url": "https://shanvi.ai",
+      "logo": "https://shanvi.ai/assets/img/logo/logo.png",
+      "telephone": "+91-9866439966",
+      "email": "info@shanvi.ai",
+      "address": {
+         "@type": "PostalAddress",
+         "addressLocality": "Hyderabad",
+         "addressCountry": "IN"
+      }
+      }
+   </script>
+
+   <!-- Service Schema -->
+   <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Business Process Automation",
+      "serviceType": "Business Process Automation Services",
+      "provider": {
+         "@type": "Organization",
+         "name": "Shanvi AI Consulting",
+         "url": "https://shanvi.ai"
       },
-      "description":"AI Strategy & Consulting services helping businesses identify AI opportunities, develop AI roadmaps, and implement intelligent automation solutions.",
-      "areaServed":"India",
-      "url":"https://shanvi.ai/ai-consulting-strategy.html"
+      "url": "https://shanvi.ai/business-process-automation.html",
+      "description": "Shanvi AI Consulting helps businesses automate repetitive tasks, streamline workflows, integrate systems, reduce operational costs, improve productivity, and scale efficiently through intelligent business process automation solutions.",
+      "areaServed": {
+         "@type": "Country",
+         "name": "India"
+      }
+      }
+   </script>
+
+   <!-- FAQ Schema -->
+   <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+         {
+            "@type": "Question",
+            "name": "What is Business Process Automation?",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Business Process Automation (BPA) uses technology to automate repetitive tasks, workflows, and business operations, helping organizations improve efficiency, reduce manual effort, and streamline processes."
+            }
+         },
+         {
+            "@type": "Question",
+            "name": "Which business processes can be automated?",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Processes such as lead management, customer onboarding, approvals, data entry, reporting, invoicing, employee workflows, customer support, and internal communications can be automated."
+            }
+         },
+         {
+            "@type": "Question",
+            "name": "How does Business Process Automation benefit my business?",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Automation helps reduce operational costs, improve productivity, minimize errors, accelerate task completion, enhance visibility into workflows, and support scalable business growth."
+            }
+         },
+         {
+            "@type": "Question",
+            "name": "Can Business Process Automation integrate with my existing systems?",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Business Process Automation can integrate with CRM platforms, ERP systems, communication tools, databases, and other business applications to create seamless workflows."
+            }
+         },
+         {
+            "@type": "Question",
+            "name": "Is Business Process Automation suitable for small businesses?",
+            "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Automation benefits businesses of all sizes by eliminating repetitive tasks, improving efficiency, and allowing teams to focus on strategic activities and customer engagement."
+            }
+         }
+      ]
       }
    </script>
 
