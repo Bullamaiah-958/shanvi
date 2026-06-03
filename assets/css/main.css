@@ -18735,3 +18735,23 @@ margin-top: 10px;
   font-style: italic;
 
 }
+.am-work-list-content ul li i {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #08C4A1;
+    margin-right: 8px;
+}
+.am-work-list-content ul li{
+  font-size: 15px;
+}
+.int-service-item-list ul b{
+  font-weight: 600;
+  color:var(--tp-common-white);
+ 
+}
+.int-service-item-list ul{
+  margin-top: 15px;
+}
