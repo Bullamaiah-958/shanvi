@@ -5525,7 +5525,7 @@ input[type=color] {
 }
 .am-work-content-wrapper {
   border-radius: 15px;
-  background-color: #1F1E22;
+  background-color: #0d0d0d;
   justify-content: space-between;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -18726,4 +18726,12 @@ margin-top: 10px;
 }
 .tp-btn-border-gradiant span {
     padding: 21px 15px !important;
+}
+.am-work-list-content p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  /* color: #333; */
+  font-style: italic;
+
 }
