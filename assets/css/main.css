@@ -18755,3 +18755,13 @@ margin-top: 10px;
 .int-service-item-list ul{
   margin-top: 15px;
 }
+.int-service-item-list ul li i {
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin-right: 8px;
+    margin-top: 5px;
+}
